@@ -53,6 +53,22 @@ public class PaymentController {
 			return order.toString();
 	}
 }
+	@PostMapping("/verify")
+	@ResponseBody
+	public boolean verifyPayment(@RequestParam String orderId,@RequestParam String paymentId,@RequestParam String signature) {
+		try {
+			RazorpayClient razorpay = new RazorpayClient("rzp_test_TGub7NlylvmPvp","1edtQQEzKdoRZP5MhBBJIjnq");
+			String verificationData=orderId+ "|"+paymentId;
+			
+			boolean isValidSignature=Utils.verifySignature(verificationData,signature,"1edtQQEzKdoRZP5MhBBJIjnq");
+			return isValidSignature;
+		}
+		catch(RazorpayException e) {
+			e.printStackTrace();
+			return false;
+
+		}
+	}
 	
 	
 	
