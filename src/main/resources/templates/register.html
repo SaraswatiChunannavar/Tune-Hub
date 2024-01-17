@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<h2>
+    <marquee>USER REGISTRATION:</marquee>
+    <marquee direction="right" behavior="alternate"
+             style="border:Pink 2px SOLID"></marquee></h2>
+ <link rel="stylesheet" th:href="@{/CSS/style2.css}">
+
+</head>
+<body>
+<form action="/register" method="post">
+<label>username</label>
+<input type="text" name="username"/>
+<br/>
+
+<label>Email</label>
+<input type="email" name="email"/>
+<br/>
+
+<label>Password</label>
+<input type="password" name="password"/>
+<br/>
+
+
+<label>gender</label>
+M<input type="radio" name="gender" value="male"/>
+F<input type="radio" name="gender" value="Female"/>
+O<input type="radio" name="gender" value="other"/>
+<br/>
+
+<label>Role</label>
+<label>Admin</label><input type="radio" name="role" value="admin"/>
+<label>Customer</label><input type="radio" name="role" value="customer"/>
+
+<br/>
+<label>Adress</label>
+<textarea name="address"></textarea>
+
+<input type="submit"/>
+</form>
+
+
+
+</body>
+</html>

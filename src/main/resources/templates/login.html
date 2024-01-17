@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/CSS/style2.css}">
+</head>
+<body>
+
+<h2>
+    <marquee>USER LOGIN:</marquee>
+    <marquee direction="right" behavior="alternate"
+             style="border:BLACK 2px SOLID"></marquee></h2>
+<form action="validate" method="post">
+<label>Email:</label>
+<input type="email" name="email"/>
+<br>
+
+<label>Pssword:</label>
+<input type="password" name="password"/>
+<br>
+
+<input type="submit" value="LOGIN"/>
+</form>
+
+</body>
+</html>
